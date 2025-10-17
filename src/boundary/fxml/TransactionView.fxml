@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.controllers.TransactionController">
+   <children>
+      <Label text="Banking Transactions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      
+      <VBox spacing="10.0">
+         <children>
+            <Label text="From Account:" />
+            <ComboBox fx:id="fromAccountCombo" />
+            <Label text="To Account:" />
+            <ComboBox fx:id="toAccountCombo" />
+            <Label text="Amount:" />
+            <TextField fx:id="amountField" />
+         </children>
+      </VBox>
+      
+      <HBox spacing="10.0">
+         <children>
+            <Button fx:id="depositButton" mnemonicParsing="false" onAction="#handleDeposit" text="Deposit" />
+            <Button fx:id="withdrawButton" mnemonicParsing="false" onAction="#handleWithdraw" text="Withdraw" />
+            <Button fx:id="transferButton" mnemonicParsing="false" onAction="#handleTransfer" text="Transfer" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+         </children>
+      </HBox>
+      
+      <Label text="Transaction Log:" />
+      <TextArea fx:id="outputArea" prefHeight="200.0" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
